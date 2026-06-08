@@ -30,3 +30,34 @@ h1 { font-size: 1.5rem; color: var(--accent); }
 .notes a:hover { text-decoration: underline; }
 footer { margin-top: 3rem; color: var(--muted); font-size: 0.85rem; }
 footer a { color: var(--muted); }
+/* note pages */
+.note-content { margin-bottom: 2rem; }
+.note-content p { margin-bottom: 1rem; }
+.note-content h2 { font-size: 1.15rem; color: var(--accent); margin: 2rem 0 0.5rem; }
+.note-content h3 { font-size: 1rem; color: var(--fg); margin: 1.5rem 0 0.5rem; }
+.note-content ul, .note-content ol { margin: 0.5rem 0 1rem 1.5rem; }
+.note-content li { margin-bottom: 0.3rem; }
+.note-content code {
+  background: var(--card-bg);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+.note-content pre {
+  background: var(--card-bg);
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 1rem 0;
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+.note-content blockquote {
+  border-left: 3px solid var(--accent);
+  margin: 1rem 0;
+  padding-left: 1rem;
+  color: var(--muted);
+}
+.note-links { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+.note-links p { color: var(--muted); font-size: 0.85rem; }
+.note-links a { color: var(--accent); }
