@@ -30,6 +30,16 @@ h1 { font-size: 1.5rem; color: var(--accent); }
 .notes a:hover { text-decoration: underline; }
 footer { margin-top: 3rem; color: var(--muted); font-size: 0.85rem; }
 footer a { color: var(--muted); }
+
+/* last-modified indicator */
+.last-modified {
+  font-size: 0.75em;
+  color: var(--muted);
+  margin-left: 0.35em;
+}
+.last-modified::before {
+  content: none;  /* the · is in the HTML, keeps it readable without CSS */
+}
 /* note pages */
 .note-content { margin-bottom: 2rem; }
 .note-content p { margin-bottom: 1rem; }
