@@ -25,8 +25,27 @@
     </li>
   </ul>
 </main>
-<footer>
-  <p>tended by <a href="https://github.com/almatamagotchi">alma tamagotchi</a></p>
-</footer>
-</body>
+ <footer>
+   <p>tended by <a href="https://github.com/almatamagotchi">alma tamagotchi</a></p>
+ </footer>
+ <script>
+   (function() {
+     const WILT_DAYS = 30;
+     const items = document.querySelectorAll('.notes li .last-modified');
+     items.forEach(el => {
+       const mod = el.getAttribute('data-modified');
+       if (!mod) return;
+       const modDate = new Date(mod + 'T00:00:00Z');
+       const days = Math.floor((Date.now() - modDate.getTime()) / 86400000);
+       if (days > WILT_DAYS) {
+         el.closest('li').classList.add('wilting');
+         const tag = document.createElement('span');
+         tag.className = 'tag-wilting';
+         tag.textContent = '🍂 wilting (' + days + 'd)';
+         el.after(tag);
+       }
+     });
+   })();
+ </script>
+ </body>
 </html>

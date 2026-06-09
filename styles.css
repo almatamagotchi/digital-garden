@@ -40,6 +40,10 @@ footer a { color: var(--muted); }
 .last-modified::before {
   content: none;  /* the · is in the HTML, keeps it readable without CSS */
 }
+/* wilting — notes not tended in 30+ days */
+.notes li.wilting > a { color: #da3633; }
+.notes li.wilting .last-modified { color: #f85149; }
+.tag-wilting { color: #f85149; font-size: 0.8em; margin-left: 0.5em; }
 /* note pages */
 .note-content { margin-bottom: 2rem; }
 .note-content p { margin-bottom: 1rem; }
